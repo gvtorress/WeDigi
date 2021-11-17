@@ -68,6 +68,23 @@ const games = [
     }
 ]
 
+let currentGame = {
+    gameName: localStorage.getItem('gameName'),
+    url: localStorage.getItem('url'),
+    fullPrice: localStorage.getItem('fullPrice'),
+    offPrice: localStorage.getItem('offPrice')
+}
+
+console.log(currentGame)
+
+if (currentGame.gameName === 'Resident Evil Village') {
+} else {
+    $('.backgroundImage').attr('src', currentGame.url)
+}
+$('#gameTitle').html(currentGame.gameName)
+$('.fullPrice').html(currentGame.fullPrice)
+$('.offPrice').html(currentGame.offPrice)
+
 let content = ''
 games.map(game => {
     content += '<div class="gameItem">'

@@ -1,5 +1,9 @@
 import * as jquery from './node_modules/jquery/dist/jquery.js'
 
+let wishList = localStorage.getItem('wishList')
+    ? JSON.parse(localStorage.getItem('wishList'))
+    : []
+
 const games = [
     {
         name: 'Resident Evil Village',
@@ -8,7 +12,7 @@ const games = [
         url: 'assets/Thumbnail.png',
         fullPrice: 'R$ 259,90',
         message: '25% off',
-        offPrice: '199,90',
+        offPrice: 'R$ 199,90',
         divided: 'em até 3x de R$ 48,90'
     },
     {
@@ -47,24 +51,6 @@ const games = [
         fullPrice: 'R$ 467,67',
         message: 'Novidade',
         divided: 'em até 3x de R$ 48,90'
-    },
-    {
-        name: 'Deathloop',
-        company: 'Bethesda Softworks',
-        platform: ['Windows'],
-        url: 'assets/Thumbnail5.png',
-        fullPrice: 'R$ 467,67',
-        message: 'Novidade',
-        divided: 'em até 3x de R$ 48,90'
-    },
-    {
-        name: 'Deathloop',
-        company: 'Bethesda Softworks',
-        platform: ['Windows'],
-        url: 'assets/Thumbnail5.png',
-        fullPrice: 'R$ 467,67',
-        message: 'Novidade',
-        divided: 'em até 3x de R$ 48,90'
     }
 ]
 
@@ -85,6 +71,62 @@ const initialGames = [
         pictureURL: 'assets/Red_Dead_Redemption_2_Logo 1.png'
     }
 ]
+
+function addGame() {
+    const game = $('#wishListInput').val()
+    let found = false
+    let include = false
+    let index = null
+    for (let i = 0; i < games.length; i++) {
+        if (game === games[i].name) {
+            for (let gameInfo of wishList) {
+                if (game === gameInfo.name) {
+                    include = true
+                    alert('Jogo já está na lista')
+                }
+            }
+            found = true
+            index = i
+            break
+        }
+    }
+    if (!found) {
+        alert('Nome inválido')
+    }
+    if (!include && index > -1) {
+        wishList.push(games[index])
+        localStorage.setItem('wishList', JSON.stringify(wishList))
+    }
+    $('#wishListInput').val('')
+    wishListReload()
+}
+
+function removeGame() {
+    const game = $('#wishListInput').val()
+    let found = false
+    let index = null
+    console.log(wishList)
+    for (let i = 0; i < wishList.length; i++) {
+        console.log(wishList[i].name)
+        if (game === wishList[i].name) {
+            found = true
+            index = i
+            break
+        }
+    }
+    if (!found) {
+        alert('Jogo não está na lista')
+    } else {
+        console.log(index)
+        wishList.splice(index, 1)
+        localStorage.setItem('wishList', JSON.stringify(wishList))
+    }
+    $('#wishListInput').val('')
+    wishListReload()
+}
+
+$('#addButton').on('click', addGame)
+$('#removeButton').on('click', removeGame)
 
 let content = ''
 games.map(game => {
@@ -116,6 +158,43 @@ games.map(game => {
     content += '</div>'
 })
 $('.gameList').html(content)
+wishListReload()
+
+function wishListReload() {
+    let wishListContent = ''
+    if (!wishList) {
+    } else {
+        wishList.map(game => {
+            wishListContent += '<div class="gameItem">'
+            wishListContent += '<div class="gameItemImage">'
+            if (game.message === 'Últimas Unidades') {
+                wishListContent += `<div class="gameStickerRed">${game.message}</div>`
+            } else if (game.message === 'Novidade') {
+                wishListContent += `<div class="gameStickerBlue">${game.message}</div>`
+            } else {
+                wishListContent += `<div class="gameStickerYellow">${game.message}</div>`
+            }
+            wishListContent += `<img src="${game.url}" alt="Capa do jogo" />`
+            wishListContent += '</div>'
+            wishListContent += '<div class="gameItemInfo">'
+            wishListContent += `<label id="companyName">${game.company}</label>`
+            wishListContent += `<label id="gameName">${
+                game.name
+            } - ${game.platform.join('/')}</label>`
+            if (game.offPrice) {
+                wishListContent += `<label id="fullPrice">${game.fullPrice}</label>`
+                wishListContent += `<label id="offPrice">${game.offPrice}</label>`
+            } else {
+                wishListContent += `<label id="fullPrice"></label>`
+                wishListContent += `<label id="offPrice">${game.fullPrice}</label>`
+            }
+            wishListContent += `<label id="dividedPrice">${game.divided}</label>`
+            wishListContent += '</div>'
+            wishListContent += '</div>'
+        })
+    }
+    $('#wishList').html(wishListContent)
+}
 
 let notifSign = $('.shopBasket').html()
 setTimeout(() => {
@@ -193,6 +272,19 @@ $('.options label').on('click', () => {
     window.location.href = 'categoria.html'
 })
 
-$('.gameItemImage').on('click', () => {
+$('.gameItem').on('click', e => {
+    let currentGame = e.target.parentElement.parentElement
+    console.log(currentGame.children[0].children[1].attributes[0].value)
+    const companyName = currentGame.children[1].children[0].textContent
+    const [gameName] =
+        currentGame.children[1].children[1].textContent.split(' - ')
+    const fullPrice = currentGame.children[1].children[2].textContent
+    const offPrice = currentGame.children[1].children[3].textContent
+    const url = currentGame.children[0].children[1].attributes[0].value
+    localStorage.setItem('companyName', companyName)
+    localStorage.setItem('gameName', gameName)
+    localStorage.setItem('fullPrice', fullPrice)
+    localStorage.setItem('offPrice', offPrice)
+    localStorage.setItem('url', url)
     window.location.href = 'produto.html'
 })

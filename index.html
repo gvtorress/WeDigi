@@ -11,6 +11,7 @@
             href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
         />
+        <script type="module" src="home.js"></script>
         <title>Home</title>
     </head>
     <body>
@@ -223,6 +224,38 @@
             </div>
         </div>
         <div class="gameList" id="promocoes"></div>
+        <div class="destaques">
+            <div class="textoDestaques">
+                <div class="divisor"></div>
+                <label>Sua lista de desejos</label>
+            </div>
+            <div class="slideButtonDiv">
+                <div class="slideButtonLeft" id="wishListLeft">
+                    <img
+                        src="assets/Icone Anterior.png"
+                        alt="icone anterior"
+                        id="promocoesImageLeft"
+                    />
+                </div>
+                <div class="slideButtonRight" id="wishListRight">
+                    <img
+                        src="assets/Icone Proximo.png"
+                        alt="icone próximo"
+                        id="promocoesImageRight"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="wishListEditing">
+            <input
+                id="wishListInput"
+                type="text"
+                placeholder="Adicionar/Deletar jogo na lista"
+            />
+            <button id="addButton">Adicionar</button>
+            <button id="removeButton">Remover</button>
+        </div>
+        <div class="gameList" id="wishList"></div>
         <div class="footer">
             <div class="newsletter">
                 <div class="newsletterDiv">
@@ -366,6 +399,5 @@
                 </div>
             </div>
         </div>
-        <script type="module" src="home.js"></script>
     </body>
 </html>
