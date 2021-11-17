@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="freightHeader">
+            <img
+                class="freightHeaderImage"
+                src="assets/Icone Frete.png"
+                alt="Imagem de caminhão de entrega"
+            />
+            <label>Frete grátis a partir de R$ 170,00</label>
+        </div>
+        <div class="pageHeader">
+            <div class="divGroup">
+                <img
+                    class="logo"
+                    src="assets/logoWeDigi.png"
+                    alt="We Digi logo"
+                />
+                <div class="options">
+                    <label>Ação</label>
+                    <label>Aventura</label>
+                    <label>RPG</label>
+                    <label>Estratégia</label>
+                    <label>Simulação</label>
+                </div>
+            </div>
+            <div class="divGroup">
+                <div class="searchInputDiv">
+                    <div class="searchInput">
+                        <input
+                            type="text"
+                            id="search"
+                            name="search"
+                            placeholder="Faça sua busca"
+                        />
+                        <img src="assets/search.png" alt="Icone de lupa" />
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="assets/Usuário.png" alt="Icone de usuário" />
+                </div>
+                <div class="shopBasket">
+                    <img src="assets/basket.png" alt="Icone de usuário" />
+                </div>
+            </div>
+        </div>
+        <div class="initialGames">
+            <img
+                class="backgroundImage"
+                src="assets/Background Banner.png"
+                alt="Game Image"
+            />
+            <img src="assets/Overlay.png" />
+            <div class="gameInfo">
+                <label id="gameTitle">Red Dead Redemption II</label>
+                <label id="gamePlatform"
+                    >Já disponível para <strong>Playstation</strong> e
+                    <strong>PC</strong></label
+                >
+                <button type="button">Comprar</button>
+            </div>
+            <div class="gameImage">
+                <img
+                    src="assets/Red_Dead_Redemption_2_Logo 1.png"
+                    alt="Game Logo"
+                />
+            </div>
+            <div class="gameNavigation">
+                <div class="bulletActive"></div>
+                <div class="bulletInactive"></div>
+                <div class="bulletInactive"></div>
+            </div>
+        </div>
+        <div class="destaques">
+            <div class="textoDestaques">
+                <div class="divisor"></div>
+                <label>Destaques da Semana</label>
+            </div>
+            <div class="slideButtonDiv">
+                <div class="slideButtonLeft" id="destaquesLeft">
+                    <img
+                        src="assets/Icone Anterior.png"
+                        alt="icone anterior"
+                        id="destaquesImageLeft"
+                    />
+                </div>
+                <div class="slideButtonRight" id="destaquesRight">
+                    <img
+                        src="assets/Icone Proximo.png"
+                        alt="icone próximo"
+                        id="destaquesImageRight"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="gameList" id="destaquesDaSemana"></div>
+        <div class="destaques">
+            <div class="textoDestaques">
+                <div class="divisor"></div>
+                <label>Busque por plataforma</label>
+            </div>
+        </div>
+        <div class="platformList">
+            <div class="platformItem">
+                <div class="platformName">
+                    <label>PlayStation</label>
+                </div>
+                <img src="assets/PS.png" alt="Playstation Image" />
+            </div>
+            <div class="platformItem">
+                <div class="platformName">
+                    <label>Xbox</label>
+                </div>
+                <img src="assets/XBox.png" alt="Playstation Image" />
+            </div>
+            <div class="platformItem">
+                <div class="platformName">
+                    <label>Nintendo Wii</label>
+                </div>
+                <img src="assets/Wii.png" alt="Playstation Image" />
+            </div>
+            <div class="platformItem">
+                <div class="platformName">
+                    <label>PC Windows</label>
+                </div>
+                <img src="assets/PC.png" alt="Playstation Image" />
+            </div>
+        </div>
+        <div class="comingSoon">
+            <div class="soonSticker">
+                <label>Em breve</label>
+            </div>
+            <div class="groupSoon">
+                <label class="soonText">Vem aí em Outubro</label>
+                <div class="divisorGroup">
+                    <div class="divisorHorizontal"></div>
+                    <label class="soonText">Far Cry 6</label>
+                </div>
+                <div class="availablePlatformsSoon">
+                    <label>para Xbox One, PS4 e PC</label>
+                </div>
+                <button>Reservar</button>
+            </div>
+        </div>
+        <div class="destaques">
+            <div class="textoDestaques">
+                <div class="divisor"></div>
+                <label>Em alta</label>
+            </div>
+            <div class="slideButtonDiv">
+                <div class="slideButtonLeft" id="emAltaLeft">
+                    <img
+                        src="assets/Icone Anterior.png"
+                        alt="icone anterior"
+                        id="emAltaImageLeft"
+                    />
+                </div>
+                <div class="slideButtonRight" id="emAltaRight">
+                    <img
+                        src="assets/Icone Proximo.png"
+                        alt="icone próximo"
+                        id="emAltaImageRight"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="gameList" id="emAlta"></div>
+        <div class="sessionDiv">
+            <div class="firstSession">
+                <div class="sessionInfo">
+                    <label>Sessão Nostalgia</label>
+                    <div class="divisorHorizontal"></div>
+                    <label>Encontre os jogos favoritos da sua infância.</label>
+                    <div>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="secondSession">
+                <div class="sessionInfo">
+                    <label>No clima das Olimpíadas</label>
+                    <div class="divisorHorizontal"></div>
+                    <label>Os melhores jogos esportivos estão aqui.</label>
+                    <div>
+                        <button>Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="destaques">
+            <div class="textoDestaques">
+                <div class="divisor"></div>
+                <label>Aproveite nossas promoções</label>
+            </div>
+            <div class="slideButtonDiv">
+                <div class="slideButtonLeft" id="promocoesLeft">
+                    <img
+                        src="assets/Icone Anterior.png"
+                        alt="icone anterior"
+                        id="promocoesImageLeft"
+                    />
+                </div>
+                <div class="slideButtonRight" id="promocoesRight">
+                    <img
+                        src="assets/Icone Proximo.png"
+                        alt="icone próximo"
+                        id="promocoesImageRight"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="gameList" id="promocoes"></div>
+        <div class="footer">
+            <div class="newsletter">
+                <div class="newsletterDiv">
+                    <label class="newsletterTitle"
+                        >Se inscreva na newsletter</label
+                    >
+                    <label class="newsletterText"
+                        >Receba no seu e-mail nossas novidades e cupons de
+                        desconto.</label
+                    >
+                </div>
+                <input
+                    type="text"
+                    class="newsletterInput"
+                    id="name"
+                    name="name"
+                    placeholder="Digite seu nome"
+                />
+                <input
+                    type="text"
+                    class="newsletterInput"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                />
+                <input
+                    type="text"
+                    class="newsletterInput"
+                    id="platform"
+                    name="platform"
+                    placeholder="Qual seu videogame?"
+                />
+                <button>Cadastrar</button>
+            </div>
+            <div class="footerDivisor"></div>
+            <div class="siteInfo">
+                <div class="institutional">
+                    <label class="institutionalTitle">Institucional</label>
+                    <label class="institutionalText">FALE CONOSCO</label>
+                    <label class="institutionalText">CUPONS</label>
+                    <label class="institutionalText">FRETE GRÁTIS</label>
+                    <label class="institutionalText">LOJAS OFICIAIS</label>
+                    <label class="institutionalText">SOBRE NÓS</label>
+                    <label class="institutionalText">TABELA DE MEDIDAS</label>
+                    <label class="institutionalText">TROCAS E DEVOLUÇÕES</label>
+                </div>
+                <div class="institutional">
+                    <label class="institutionalTitle">Ajuda</label>
+                    <label class="institutionalText"
+                        >PERGUNTAS FREQUENTES</label
+                    >
+                    <label class="institutionalText">TERMOS DE USO</label>
+                    <label class="institutionalText"
+                        >POLÍTICAS DE PRIVACIDADE</label
+                    >
+                    <label class="institutionalText">COMO COMPRAR</label>
+                </div>
+                <div class="institutional">
+                    <label class="institutionalTitle">Atendimento</label>
+                    <div class="telephoneDiv">
+                        <img
+                            class="telImage"
+                            src="assets/Icone Telefone.png"
+                            alt="icone telefone"
+                        />
+                        <label class="institutionalText"
+                            >TELEFONE: (11) 99999-0000</label
+                        >
+                    </div>
+                    <div class="telephoneDiv">
+                        <img
+                            class="telImage"
+                            src="assets/Icone WhatsApp.png"
+                            alt="icone whatsapp"
+                        />
+                        <label class="institutionalText"
+                            >WHATSAPP: (11) 99999-0000</label
+                        >
+                    </div>
+                    <div class="telephoneDiv">
+                        <img
+                            class="telImage"
+                            src="assets/Icone Email.png"
+                            alt="icone email"
+                        />
+                        <label class="institutionalText"
+                            >EMAIL: CONTATO@WIDIGI.COM.BR</label
+                        >
+                    </div>
+                    <div>
+                        <img
+                            class="iconImage"
+                            src="assets/Icone Facebook.png"
+                            alt="icone Facebook"
+                        />
+                        <img
+                            class="iconImage"
+                            src="assets/Icone Instagram.png"
+                            alt="icone Instagram"
+                        />
+                    </div>
+                </div>
+                <div class="institutional">
+                    <div class="telephoneDiv">
+                        <label class="institutionalTitle">Siga @wedigi</label>
+                        <img
+                            class="iconFollow"
+                            src="assets/Icone Instagram.png"
+                            alt="icone Instagram"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="assets/Post Insta1.png"
+                            alt="post Instagram"
+                        />
+                        <img
+                            src="assets/Post Insta2.png"
+                            alt="post Instagram"
+                        />
+                        <img
+                            src="assets/Post Insta3.png"
+                            alt="post Instagram"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="miniFooter">
+                <label
+                    >DOG TRIP BRASIL - CNPJ 33.912.013/0001-96 Todos os direitos
+                    reservados</label
+                >
+                <img src="assets/Cartoes.png" alt="cartões aceitos" />
+                <div class="logos">
+                    <img
+                        class="logoFooter"
+                        src="assets/vtex logo.png"
+                        alt="logo VTEX"
+                    />
+                    <img class="logoFooter" src="assets/logoWeDigiFooter.png" />
+                </div>
+            </div>
+        </div>
+        <script type="module" src="home.js"></script>
+    </body>
+</html>

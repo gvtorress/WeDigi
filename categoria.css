@@ -1,0 +1,716 @@
+* {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #06092b;
+}
+
+.freightHeader {
+    background-color: #1db8fb;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.freightHeaderImage {
+    margin-right: 10px;
+    height: 18px;
+}
+
+label {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.pageHeader {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.logo {
+    align-self: center;
+    height: 50px;
+}
+
+.options {
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options label {
+    margin-right: 60px;
+    font-size: 14px;
+}
+
+.options label:hover {
+    cursor: pointer;
+}
+
+.searchInputDiv {
+    width: 275px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchInput {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #4839ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+#search {
+    width: 220px;
+    height: 40px;
+    font-size: 10px;
+    padding: 0 20px;
+    background-color: #06092b;
+    border: none;
+    color: #fff;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.searchInput img {
+    width: 16px;
+    height: 12px;
+    margin-right: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: 52px;
+    position: static;
+}
+
+.shopBasket {
+    width: 35px;
+    display: flex;
+    align-items: center;
+    margin-left: 52px;
+}
+
+.notification {
+    width: 7px;
+    height: 7px;
+    border-radius: 7px;
+    background-color: #ffbf00;
+    position: relative;
+    right: 7px;
+    top: 0px;
+    align-self: flex-start;
+}
+
+.divGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 60px;
+}
+
+.footer {
+    width: 100%;
+    height: 650px;
+    background-color: #03051a;
+    padding-top: 80px;
+}
+
+.newsletter {
+    margin: 0 60px 85px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.newsletterText {
+    max-width: 434px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+    text-align: left;
+    opacity: 0.5;
+}
+
+.newsletterTitle {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    text-align: left;
+    opacity: 1;
+    margin-bottom: 13px;
+}
+
+.newsletterDiv {
+    display: flex;
+    flex-direction: column;
+    /* justify-self: flex-start; */
+    align-items: flex-start;
+}
+
+.newsletterInput {
+    width: 281px;
+    height: 60px;
+    background-color: #03051a;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    border-radius: 10px;
+    border: 2px solid #4839ff;
+    color: #fff;
+}
+
+.newsletter button {
+    width: 281px;
+    height: 60px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    background-color: #4839ff;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footerDivisor {
+    width: calc(100vw - 60px);
+    height: 1px;
+    margin: 80px 60px;
+    background-color: #4839ff;
+    opacity: 10%;
+}
+
+.siteInfo {
+    width: calc(100% - 60px);
+    margin: 0px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.institutional {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 60px;
+}
+
+.institutionalText {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    opacity: 75%;
+}
+
+.institutionalText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.institutionalTitle {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.telephoneDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.telImage {
+    height: 14px;
+    width: 14px;
+    background-size: cover;
+    margin-right: 13px;
+}
+
+.iconImage {
+    width: 25px;
+    height: 25px;
+    margin-top: 19px;
+    margin-left: 29px;
+}
+
+.iconFollow {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-bottom: auto;
+}
+
+.miniFooter {
+    width: calc(100% - 120px);
+    height: 80px;
+    margin: 80px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.miniFooter label {
+    max-width: 270px;
+    text-align: left;
+}
+
+.logoFooter {
+    margin-left: 40px;
+}
+
+.gameType {
+    width: 100%;
+    height: 545px;
+    display: flex;
+}
+
+.gameType img {
+    width: 100%;
+    height: 545px;
+    object-fit: cover;
+}
+
+.gameTypeInfo {
+    width: 670px;
+    height: 100%;
+    background-color: #1db8fb;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px 0 60px;
+    box-sizing: border-box;
+}
+
+.gameTypeTitle {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.gameTypeTitle strong {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+.gameTypeH1 {
+    margin: 125px 0px 5px 0px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 52px;
+}
+
+.gameTypeDescription {
+    margin-top: 25px;
+    margin-right: 30px;
+    text-align: start;
+}
+
+.gameListHeader {
+    margin: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter {
+    height: 50px;
+    width: fit-content;
+    padding: 15px 35px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter:hover {
+    cursor: pointer;
+}
+
+.filter img {
+    margin-right: 15px;
+}
+
+.filterTitle {
+    align-self: center;
+    text-align: center;
+}
+
+.filterTitle:hover {
+    cursor: pointer;
+}
+
+.orderBy {
+    height: 50px;
+    width: fit-content;
+    padding: 15px 35px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderBy:hover {
+    cursor: pointer;
+}
+
+.orderBy img {
+    margin-right: 15px;
+}
+
+.orderByTitle {
+    align-self: center;
+    text-align: center;
+}
+
+.orderByTitle:hover {
+    cursor: pointer;
+}
+
+.gameList {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 60px;
+}
+
+.gameListGrid {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gameItem {
+    /* margin-bottom: 20px; */
+    color: #fff;
+    position: relative;
+}
+
+.gameStickerYellow {
+    width: fit-content;
+    height: 24;
+    border-radius: 12px;
+    background-color: #ffbf00;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 800;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 30px 20px;
+    z-index: 1;
+}
+
+.gameStickerBlue {
+    width: fit-content;
+    height: 24;
+    border-radius: 12px;
+    background-color: #1db8fb;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 800;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 30px 20px;
+    z-index: 1;
+}
+
+.gameStickerRed {
+    width: fit-content;
+    height: 24;
+    border-radius: 12px;
+    background-color: #ff0000;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 800;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 30px 20px;
+    z-index: 1;
+}
+
+.gameItemImage img {
+    width: 427px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.gameItemImage:hover {
+    cursor: pointer;
+}
+
+.gameItemInfo {
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 160px; */
+}
+
+#companyName {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#gameName {
+    margin-top: 3px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 800;
+}
+
+#fullPrice {
+    margin-top: 47px;
+    height: 14px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+#offPrice {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+}
+
+#dividedPrice {
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.loadMore {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 72px;
+}
+
+.loadMoreButton {
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px 35px;
+    align-items: center;
+}
+
+.loadMoreButton:hover {
+    cursor: pointer;
+}
+
+.loadMoreLabel {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
+.loadMoreLabel:hover {
+    cursor: pointer;
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+    margin: 160px 60px;
+    align-items: center;
+}
+
+.blog img {
+    width: 885px;
+    height: 610px;
+    object-fit: contain;
+    margin-right: 60px;
+}
+
+.divisorHorizontal {
+    width: 50px;
+    height: 5px;
+    background-color: #4839ff;
+}
+
+.blogTipsTitle {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.blogTipsText {
+    margin-top: 60px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.blogTips {
+    margin-bottom: 60px;
+}
+
+.filterType {
+    margin-bottom: 60px;
+}
+
+.filterTypeHeader {
+    margin-bottom: 30px;
+}
+
+.filterTypeTitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.filterOptions {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.selection {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4839ff;
+    border-radius: 5px;
+}
+
+.selectionText {
+    margin-left: 10px;
+}
+
+.selectionOrder {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 1px solid #4839ff;
+    border-radius: 10px;
+}
+
+.valueFilter {
+    position: relative;
+}
+
+.fullLine {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #1db8fb;
+    opacity: 0.25;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /* margin-left: 7px; */
+    margin-top: 5px;
+}
+
+.selectionLine {
+    width: 50%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #1db8fb;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.firstSelectionCircle {
+    width: 14px;
+    height: 14px;
+    background-color: #4839ff;
+    border-radius: 7px;
+    position: absolute;
+    left: 0px;
+}
+
+.secondSelectionCircle {
+    width: 14px;
+    height: 14px;
+    background-color: #4839ff;
+    border-radius: 7px;
+    position: absolute;
+    left: 50%;
+}
+
+.rectangle {
+    width: 60px;
+    height: 25px;
+    background-color: #4839ff;
+    position: absolute;
+    top: -37px;
+    left: calc(50% - 25px);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.polygon {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -14px;
+    left: calc(50% + 2px);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #4839ff;
+}
+
+.minMaxValues {
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.minMaxValues label {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+}
