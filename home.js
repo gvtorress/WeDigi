@@ -1,5 +1,7 @@
 import * as jquery from './node_modules/jquery/dist/jquery.js'
 
+// localStorage.setItem('wishList', '')
+
 let wishList = localStorage.getItem('wishList')
     ? JSON.parse(localStorage.getItem('wishList'))
     : []
@@ -77,6 +79,9 @@ function addGame() {
     let found = false
     let include = false
     let index = null
+    wishList = localStorage.getItem('wishList')
+        ? JSON.parse(localStorage.getItem('wishList'))
+        : []
     for (let i = 0; i < games.length; i++) {
         if (game === games[i].name) {
             for (let gameInfo of wishList) {
@@ -103,11 +108,15 @@ function addGame() {
 
 function removeGame() {
     const game = $('#wishListInput').val()
+    if (!game) {
+        alert('Insira o nome do jogo que deseja retirar da lista de desejos')
+    }
+    wishList = localStorage.getItem('wishList')
+        ? JSON.parse(localStorage.getItem('wishList'))
+        : []
     let found = false
     let index = null
-    console.log(wishList)
     for (let i = 0; i < wishList.length; i++) {
-        console.log(wishList[i].name)
         if (game === wishList[i].name) {
             found = true
             index = i
@@ -117,7 +126,6 @@ function removeGame() {
     if (!found) {
         alert('Jogo não está na lista')
     } else {
-        console.log(index)
         wishList.splice(index, 1)
         localStorage.setItem('wishList', JSON.stringify(wishList))
     }
@@ -244,7 +252,6 @@ setTimeout(() => {
 $('.slideButtonRight').on('click', e => {
     let button = e.target.id
     if (button === 'destaquesRight' || button === 'destaquesImageRight') {
-        console.log(button)
         $('#destaquesDaSemana').animate({ scrollLeft: '+=386' }, 1000)
     } else if (button === 'emAltaRight' || button === 'emAltaImageRight') {
         $('#emAlta').animate({ scrollLeft: '+=386' }, 1000)
@@ -259,7 +266,6 @@ $('.slideButtonRight').on('click', e => {
 $('.slideButtonLeft').on('click', e => {
     let button = e.target.id
     if (button === 'destaquesLeft' || button === 'destaquesImageLeft') {
-        console.log(button)
         $('#destaquesDaSemana').animate({ scrollLeft: '-=386' }, 1000)
     } else if (button === 'emAltaLeft' || button === 'emAltaImageLeft') {
         $('#emAlta').animate({ scrollLeft: '-=386' }, 1000)
@@ -274,7 +280,6 @@ $('.options label').on('click', () => {
 
 $('.gameItem').on('click', e => {
     let currentGame = e.target.parentElement.parentElement
-    console.log(currentGame.children[0].children[1].attributes[0].value)
     const companyName = currentGame.children[1].children[0].textContent
     const [gameName] =
         currentGame.children[1].children[1].textContent.split(' - ')

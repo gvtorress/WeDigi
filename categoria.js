@@ -395,7 +395,6 @@ $('.loadMoreButton').on('click', () => {
 $('.slideButtonRight').on('click', e => {
     let button = e.target.id
     if (button === 'destaquesRight' || button === 'destaquesImageRight') {
-        console.log(button)
         $('#destaquesDaSemana').animate({ scrollLeft: '+=386' }, 1000)
     } else if (button === 'emAltaRight' || button === 'emAltaImageRight') {
         $('#emAlta').animate({ scrollLeft: '+=386' }, 1000)

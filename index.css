@@ -709,3 +709,24 @@ label {
 .logoFooter {
     margin-left: 40px;
 }
+
+#wishListInput {
+    width: 281px;
+    height: 60px;
+    background-color: #03051a;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #4839ff;
+    color: #fff;
+}
+
+.wishListButton {
+    width: 140px;
+    height: 60px;
+    margin-left: 10px;
+    background-color: #4839ff;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}

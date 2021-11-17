@@ -75,8 +75,6 @@ let currentGame = {
     offPrice: localStorage.getItem('offPrice')
 }
 
-console.log(currentGame)
-
 if (currentGame.gameName === 'Resident Evil Village') {
 } else {
     $('.backgroundImage').attr('src', currentGame.url)
